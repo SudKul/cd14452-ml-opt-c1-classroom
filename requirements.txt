@@ -3,13 +3,17 @@
 # These pins reproduce the shared venv used by every notebook in this course.
 # Install into a fresh virtualenv (Python 3.10) with:
 #
-#   python3 -m venv --system-site-packages /path/to/cd14452-venv
-#   /path/to/cd14452-venv/bin/pip install --upgrade pip
-#   /path/to/cd14452-venv/bin/pip install -r requirements.txt
+#   python3 -m venv --system-site-packages /path/to/venv-torch2.3
+#   /path/to/venv-torch2.3/bin/pip install --upgrade pip
+#   /path/to/venv-torch2.3/bin/pip install -r requirements.txt
 #
-# On Vocareum the venv lives at /voc/data/cd14452-venv and is provisioned
+# On Vocareum the venv lives at /voc/data/venv-torch2.3 and is provisioned
 # by the container's Configure Workspace step. Kernel is registered at
-# /usr/local/share/jupyter/kernels/cd14452-venv.
+# /usr/local/share/jupyter/kernels/venv-torch2.3 (display name "venv-torch2.3").
+#
+# The lesson-2 quantization demo-1 / exercise_1 notebooks require torch 2.6 and
+# run on a second venv (/voc/data/venv-torch2.6) exposed as kernel
+# "venv-torch2.6". See that venv for its own (torch 2.6 / optimum-quanto 0.2.7) pins.
 #
 # Torch/torchvision/triton must come from the PyTorch CUDA 12.1 index.
 
